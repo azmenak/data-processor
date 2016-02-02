@@ -1,0 +1,25 @@
+{
+  "name": "realstax-data-processor",
+  "version": "1.0.0",
+  "description": "process data dumps from brokers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "bluebird": "^3.2.1",
+    "chai": "^3.5.0",
+    "fs-extra-promise": "^0.3.1",
+    "gulp": "^3.9.0",
+    "lambda-packer": "0.0.1",
+    "lodash": "^4.2.0",
+    "mocha": "^2.4.5",
+    "mocha-gulp-watcher": "^2.2.0",
+    "xlsx": "^0.8.0"
+  }
+}
