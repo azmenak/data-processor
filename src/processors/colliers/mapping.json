@@ -1,0 +1,88 @@
+{
+  "local_id": {
+    "type": "integer",
+    "label": "PropertyID"
+  },
+  "available": {
+    "type": "enum",
+    "label": "Status",
+    "values": {
+      "Available": true,
+      "_default": false
+    }
+  },
+  "minor_uses": [
+    "PropertySubCategory2",
+    "PropertySubCategory3",
+    "PropertySubCategory4"
+  ],
+  "address": "Address",
+  "city": "City",
+  "state": "State",
+  "zip": "ZipCode",
+  "lot_size": {
+    "type": "float",
+    "label": "LotSizeAcres"
+  },
+  "description": "PropertyDescription",
+  "location_description": "LocationDescription",
+  "property_name": "PropertyName",
+  "year_built": {
+    "type": "integer",
+    "label": "YearBuilt"
+  },
+  "parking_ratio": {
+    "type": "float",
+    "label": "ParkingRatio"
+  },
+  "contact_emails": [
+    "Contact1(email address)",
+    "Contact2(email address)",
+    "Contact3(email address)"
+  ],
+  "admin_email": {
+    "type": "lowercase",
+    "label": "PropertyAdministrator(email address)"
+  },
+  "traffice_count": {
+    "type": "integer",
+    "label": "Traffic Count"
+  },
+  "highlights": [
+    "HighLight1",
+    "HighLight2",
+    "HighLight3",
+    "HighLight4",
+    "HighLight5",
+    "HighLight6"
+  ],
+  "floor_count": {
+    "type": "integer",
+    "label": "Prop_Floors"
+  },
+  "main_photo": {
+    "type": "attachement",
+    "label": "MainPhotoURL"
+  },
+  "flyer_photo": {
+    "type": "attachement",
+    "label": "PropertyFlyerURL"
+  },
+  "additional_photo": {
+    "type": "attachement",
+    "label": "PropertyPhotoURL"
+  },
+  "de_bi_property_id": {
+    "type": "integer",
+    "label": "DeBiPropID"
+  },
+  "major_use": "PropertySubCategory1",
+  "avail_rsf": {
+    "type": "integer",
+    "label": "BuildingSize"
+  },
+  "rsf": {
+    "type": "integer",
+    "label": "BuildingSize"
+  }
+}
