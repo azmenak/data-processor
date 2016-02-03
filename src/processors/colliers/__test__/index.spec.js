@@ -23,7 +23,7 @@ const mappingKeys = [
   'admin_email'
 ];
 
-describe('Colliers', function() {
+describe('== Colliers ==', function() {
   let testFile;
   let dumpData;
 

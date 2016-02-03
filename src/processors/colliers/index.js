@@ -1,6 +1,6 @@
-import xlsx from 'xlsx';
 import _ from 'lodash';
 import propMap from './mapping.json';
+import getExcelJSON from '../../utils/getExcelJSON';
 
 export function handler(event, context) {
 
@@ -51,6 +51,8 @@ export function parseData(data) {
             const attachement = { label: mappedKey, file: val.toLowerCase() };
             (result.attachements || (result.attachements = [])).push(attachement);
             break;
+          default:
+            throw new Error(`Unknown parser type "${parser.type}"`);
           }
         }
       }
@@ -59,20 +61,6 @@ export function parseData(data) {
 }
 
 export function getDumpData(xlsFileBuffer) {
-  const data = getJSON(xlsFileBuffer).PropertyImportTemplate;
+  const data = getExcelJSON(xlsFileBuffer).PropertyImportTemplate;
   return _.drop(data, 1);
-}
-
-function getJSON(buffer) {
-  return workbookToJSON(xlsx.read(buffer));
-}
-
-function workbookToJSON(workbook) {
-  return _.reduce(workbook.SheetNames, (result, sheetName) => {
-    const roa = xlsx.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
-    if (roa.length > 0) {
-      result[sheetName] = roa;
-    }
-    return result;
-  }, {});
 }
